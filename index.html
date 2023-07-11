@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradient Generator</title>
+    
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Gradient Color Generator</h1>
+      <div id="preview"></div>
+      <div id="color-inputs">
+        <div class="color-input">
+          <div class="color-preview"></div>
+          <input
+            oninput="generateGradient()"
+            type="color"
+            class="color"
+            value="#ff0000"
+          />
+        </div>
+        <div class="color-input">
+          <div class="color-preview"></div>
+          <input
+            oninput="generateGradient()"
+            type="color"
+            class="color"
+            value="#00ff00"
+          />
+        </div>
+      </div>
+      
+      <div class="flex-center gap-1">
+        <button id="add-color">Add Color</button>
+        <button class="d-none" id="remove-color">Remove Color</button>
+        <button id="generate-gradient">Random Gradient</button>
+      </div>
+      <div class="show-code" id="gradient-code"></div>
+    </div>
+  </body>
+</html>
